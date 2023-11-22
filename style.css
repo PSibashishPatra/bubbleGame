@@ -70,8 +70,8 @@ html,body{
     display:flex;
     align-items: center;
     justify-content: center;
-    width:30px;
-    height: 30px;
+    width:60px;
+    height: 60px;
     background-color: rgb(211, 154, 85);
     color:aliceblue;
     border-radius: 40%;
