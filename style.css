@@ -57,6 +57,8 @@ html,body{
 
 #pbtm{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
     flex-wrap: wrap;
     width: 100%;

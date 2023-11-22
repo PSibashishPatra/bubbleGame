@@ -1,5 +1,6 @@
-var timer = 60 ;
+var timer = 6 ;
 var score = 0 ;
+var hitrn = 0 ;
 
 
 function increaseScore(){
@@ -10,8 +11,8 @@ function increaseScore(){
 
 
 function getNewHit(){
-    var rn = Math.floor(Math.random()*10);
-    document.querySelector("#hitval").textContent = rn ;
+    hitrn = Math.floor(Math.random()*10);
+    document.querySelector("#hitval").textContent = hitrn ;
 }
 
 function makeBubble() {
@@ -35,12 +36,19 @@ function runTimer(){
         }
         else{
             clearInterval(timerint);
+            document.querySelector("#pbtm").innerHTML = `<h1>Game Over</h1>`
         }
     },1000);
 }
 
 document.querySelector("#pbtm").addEventListener("click",function (details) {
-    console.log(Number(details.target.textContent));
+    var clickednum = Number(details.target.textContent);
+    if(clickednum === hitrn) {
+        increaseScore();
+        makeBubble();
+        getNewHit();
+    }
+   
 });
 
 getNewHit();
